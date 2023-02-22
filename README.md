@@ -33,10 +33,10 @@ Check `config/config.example.json` for an example configuration and create a new
 
 - Make sure to have Docker installed.
 - Start the bot with the following command while passing your CLIENT_ID and TOKEN that you have obtained in the previous step in to it.
+- Git Clone, then 'docker compose build', afterwards run the command below:
 
   ```
-  docker pull markokajzer/discord-soundbot && \
-  docker run --name soundbot --restart=on-failure:10 -e CLIENT_ID=YOUR_CLIENT_ID -e TOKEN=YOUR_TOKEN -v $(pwd)/sounds:/app/sounds -v $(pwd)/db:/app/db markokajzer/discord-soundbot
+  docker run --name soundbot --restart=on-failure:10 -e CLIENT_ID=YOUR_CLIENT_ID -e TOKEN=YOUR_TOKEN -v $(pwd)/sounds:/app/sounds -v $(pwd)/db:/app/db soundbot
   ```
 
 - To run the bot in the background additionally use the `-d` flag in the last step.
